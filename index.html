@@ -1,19 +1,61 @@
-file = open("titanic.csv","r")
-cols = file.readline()
-data = file.readlines()
-file.close()
 
-fo=open("index.html","w")
-fo.write("<html>"
-fo.write("<hl>Women and Children first?</hl>")
-fo.write("<p>Here are the results of my Titanic analysis.</p>")
-fo.write("<img src='titanic.jpg' width='700px'>")
-fo.write("<br>")
-fo.write("<h2>Study Conclusion</h2>")
-fo.write("<svg width='800' height='500'>")
-fo.write("<rect width='740' height='100' fill='#d9854a'></rect>")
-fo.write("<text x='25' y='25' fill='white'>Women</text>")
-fo.write("<rect y='100' width='590' height='100' fill='green'></rect>")
-fo.write("<rect y='200' width='190' height='100' fill='blue'></rect>")
-fo.write("</html>")
-fo.close()
+<html><!--beginning of html-->
+
+<style>
+
+.women{
+    width:100px;
+    height:100px;
+    fill:red;
+    transition:width 2s;
+    rx:15px;
+    
+    }
+
+.women:hover{
+width:740px;
+height:100px;
+
+    }
+
+div{
+margin:30px;
+font-family:arial;
+border:solid 2px;
+border-radius:15px;
+padding:20px
+    }
+
+h1{
+color:#0b4370;
+font-family:Lucida handwriting;
+    }
+
+h2{
+color:#0b4370;
+font-family:Lucida handwriting;
+    }
+
+p{
+font-family:Lucida Console;
+    }
+
+</style>
+<div>
+<h1>Women and Children first?</h1>
+
+<p>Here are the results of my Titanic analysis.</p>
+
+<img src='titanic.jpg' width='500px'>
+<br>
+
+<h2>Study Conclusion</h2>
+<svg width='800' height='500'>
+<rect class='women'></rect>
+<text x='18' y='60' font=size='20' fill='white'>Women</text>
+<text x='650' y='60' font-size='40' fill='#edf5f7'>74%</text>
+<rect y='100' width='590' height='100' rx='15' fill='yellow'></rect>
+<rect y='200' width='190' height='100' rx='15' fill='purple'></rect>
+</svg>
+</div>
+</html>
